@@ -1,0 +1,206 @@
+﻿<UserControl x:Class="WeSplit.AddingUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WeSplit"
+             mc:Ignorable="d" 
+             x:Name="addingUserControl"
+             d:DesignWidth="1280"
+             d:DesignHeight="720"
+             Loaded="addingUserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Right"
+                    Orientation="Horizontal"
+                    Margin="5">
+            <Button x:Name="cancelButton"
+                    Style="{StaticResource cancelButtonStyle}"
+                    Click="cancelButton_Click"/>
+            <Button x:Name="saveButton"
+                    Style="{StaticResource saveButtonStyle}"
+                    Click="saveButton_Click"/>
+        </StackPanel>
+        <TextBlock x:Name="title"
+                   Grid.Row="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   FontFamily="Tahoma"
+                   FontStyle="Italic"
+                   FontWeight="Heavy"
+                   FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToTitleTextSizeConverter}}"
+                   Foreground="#F4C51F"
+                   Margin="20 20 0 0"/>
+        <Grid Grid.Row="1"
+              Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ScrollViewer Grid.Row="0"
+                              HorizontalScrollBarVisibility="Disabled"
+                              Focusable="False">
+                    <StackPanel x:Name="membersPanel"
+                                HorizontalAlignment="Center"/>
+                    <!--<StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right">
+                        </StackPanel>
+                    </StackPanel>-->
+                </ScrollViewer>
+                <Button Grid.Row="1"
+                        x:Name="addMemberButton"
+                        Style="{StaticResource addMemberButtonStyle}"
+                        Click="addMemberButton_Click"/>
+            </Grid>
+            <DockPanel Grid.Column="0"
+                       LastChildFill="True">
+                <StackPanel DockPanel.Dock="Top"
+                            Orientation="Horizontal"
+                            Margin="10">
+                    <TextBlock Text="Tên chuyến đi: "
+                               FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                               Style="{StaticResource addingHeaderTextStyle}"/>
+                    <TextBox x:Name="journeyNameBox"
+                             ToolTip="Tên của chuyến đi, tối đa 32 ký tự"
+                             MaxLength="32"
+                             Width="200"
+                             FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                             Style="{StaticResource fillTextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top"
+                            Orientation="Horizontal"
+                            Margin="10">
+                    <TextBlock Text="Địa điểm: "
+                               FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                               Style="{StaticResource addingHeaderTextStyle}"/>
+                    <TextBox x:Name="placeBox"
+                             ToolTip="Tên của địa điểm, tối đa 16 ký tự"
+                             MaxLength="16"
+                             Width="160"
+                             FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                             Style="{StaticResource fillTextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top"
+                            Orientation="Horizontal"
+                            Margin="10">
+                    <TextBlock Text="Giai đoạn: "
+                               FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                               Style="{StaticResource addingHeaderTextStyle}"/>
+                    <ComboBox x:Name="stageBox"
+                              ToolTip="Giai đoạn của chuyến đi"
+                              FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                              Style="{StaticResource comboBoxStyle}">
+                        <ComboBoxItem Content="Bắt đầu"
+                                      Foreground="#FFFFFF"/>
+                        <ComboBoxItem Content="Đang đi"
+                                      Foreground="#FFFFFF"/>
+                        <ComboBoxItem Content="Đến nơi"
+                                      Foreground="#FFFFFF"/>
+                        <ComboBoxItem Content="Đang về"
+                                      Foreground="#FFFFFF"/>
+                        <ComboBoxItem Content="Kết thúc"
+                                      Foreground="#FFFFFF"/>
+                    </ComboBox>
+                </StackPanel>
+                <Border DockPanel.Dock="Top"
+                        CornerRadius="5"
+                        Background="#222222"
+                        Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="9*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0"
+                              Margin="5 0 5 0">
+                            <TextBlock VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Text="Hình ảnh"
+                                       FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                       Style="{StaticResource addingHeaderTextStyle}"/>
+                            <StackPanel VerticalAlignment="Center"
+                                        HorizontalAlignment="Right"
+                                        Orientation="Horizontal">
+                                <Button x:Name="removeImageButton"
+                                        IsEnabled="{Binding ElementName=imageListView, Path=SelectedIndex, Converter={StaticResource selectedToDisabledConverter}}"
+                                        Style="{StaticResource removeImageButtonStyle}"
+                                        Click="removeImageButton_Click"/>
+                                <Button x:Name="addImageButton"
+                                        Style="{StaticResource addImageButtonStyle}"
+                                        Click="addImageButton_Click"/>
+                            </StackPanel>
+                            <Line VerticalAlignment="Bottom"
+                                  Stretch="UniformToFill"
+                                  Stroke="#CCCCCC"
+                                  StrokeThickness="3"
+                                  X1="1"/>
+                        </Grid>
+                        <TextBlock Grid.Row="1"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Text="Chưa có hình ảnh"
+                                   FontSize="{Binding ElementName=addingUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                   Foreground="#999999"
+                                   Visibility="{Binding ElementName=imageListView, Path=Items.Count, Converter={StaticResource itemCountToEmtyNoficationCoverter}}"/>
+                        <ListView x:Name="imageListView"
+                                  Grid.Row="1"
+                                  VerticalAlignment="Top"
+                                  HorizontalAlignment="Left"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  Margin="5">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="{x:Type ListViewItem}">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected"
+                                                 Value="True">
+                                            <Setter Property="IsTabStop"
+                                                    Value="False"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                    <Setter Property="Margin"
+                                            Value="4"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                                <ContentPresenter/>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver"
+                                                             Value="True">
+                                                        <Setter Property="Effect"
+                                                                Value="{StaticResource whiteStrongShadowEffect}"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsSelected"
+                                                             Value="True">
+                                                        <Setter Property="Effect"
+                                                                Value="{StaticResource whiteStrongShadowEffect}"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="3"/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+                        </ListView>
+                    </Grid>
+                </Border>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</UserControl>

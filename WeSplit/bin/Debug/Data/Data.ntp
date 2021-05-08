@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <parameterSettings>
+    <splashScreenDisabled>true</splashScreenDisabled>
+  </parameterSettings>
+  <journeys>
+    <Journey>
+      <id>1</id>
+      <journeyName>Tây du kí</journeyName>
+      <place>Tây thiên</place>
+      <stage>4</stage>
+      <members>
+        <Member>
+          <memberName>Ngộ Không</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Cơm chay</spendingName>
+              <cost>1000000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Bát giới</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Rượu</spendingName>
+              <cost>200000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt</spendingName>
+              <cost>300000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Đường tăng</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>500000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Lều</spendingName>
+              <cost>450000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Sa Tăng</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Cơm chay</spendingName>
+              <cost>800000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Lều</spendingName>
+              <cost>500000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>1.0.jpg</string>
+        <string>1.1.jpg</string>
+        <string>1.2.jpg</string>
+        <string>1.3.jpg</string>
+      </images>
+      <membersView>Ngộ Không, Bát giới, Đường tăng, Sa Tăng.</membersView>
+    </Journey>
+    <Journey>
+      <id>2</id>
+      <journeyName>Hoa Sơn luận kiếm</journeyName>
+      <place>Hoa Sơn</place>
+      <stage>4</stage>
+      <members>
+        <Member>
+          <memberName>Đông Tà</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Rượu</spendingName>
+              <cost>2000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt</spendingName>
+              <cost>3000000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Tây Độc</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Cơm</spendingName>
+              <cost>2000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt</spendingName>
+              <cost>1000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Cà phê</spendingName>
+              <cost>500000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Nam Đế</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>105000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Cơm</spendingName>
+              <cost>800000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>170000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Bắc Cái</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Rượu</spendingName>
+              <cost>700000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt</spendingName>
+              <cost>1900000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Cơm</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Trung Thần Thông</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Sách</spendingName>
+              <cost>700000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Nước</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Cửu Âm Chân Kinh</spendingName>
+              <cost>10000000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>2.0.jpg</string>
+        <string>2.1.jpg</string>
+        <string>2.2.jpg</string>
+        <string>2.3.jpg</string>
+      </images>
+      <membersView>Đông Tà, Tây Độc, Nam Đế, Bắc Cái, Trung Thần Thông.</membersView>
+    </Journey>
+    <Journey>
+      <id>3</id>
+      <journeyName>Tử chiến núi Thiếu Thất</journeyName>
+      <place>Thiếu Lâm Tự</place>
+      <stage>2</stage>
+      <members>
+        <Member>
+          <memberName>Tiêu Phong</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Rượu</spendingName>
+              <cost>3000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Giữ ngựa</spendingName>
+              <cost>180000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Tiền phạt</spendingName>
+              <cost>160000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Hư Trúc</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Màn thầu</spendingName>
+              <cost>50000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Gà</spendingName>
+              <cost>400000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>120000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Đoàn Dự</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Bào ngư</spendingName>
+              <cost>500000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Cá</spendingName>
+              <cost>600000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuốc giảm đau</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>3.0.jpg</string>
+        <string>3.1.jpg</string>
+        <string>3.2.jpg</string>
+      </images>
+      <membersView>Tiêu Phong, Hư Trúc, Đoàn Dự.</membersView>
+    </Journey>
+    <Journey>
+      <id>4</id>
+      <journeyName>Du lịch Thành Đô</journeyName>
+      <place>Núi Nga Mi</place>
+      <stage>3</stage>
+      <members>
+        <Member>
+          <memberName>Khắc Tây</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Vé vào cổng</spendingName>
+              <cost>1500000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Kem đánh răng</spendingName>
+              <cost>300000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Túc Đạo</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Tham quan</spendingName>
+              <cost>1000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>150000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt heo</spendingName>
+              <cost>600000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Giác Viễn</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Ăn tối</spendingName>
+              <cost>300000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Ăn trưa</spendingName>
+              <cost>300000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Trái cây</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>4.0.jpg</string>
+        <string>4.1.jpg</string>
+        <string>4.2.jpg</string>
+        <string>4.3.jpg</string>
+      </images>
+      <membersView>Khắc Tây, Túc Đạo, Giác Viễn.</membersView>
+    </Journey>
+    <Journey>
+      <id>5</id>
+      <journeyName>Phượt xuyên Việt</journeyName>
+      <place>Việt Nam</place>
+      <stage>1</stage>
+      <members>
+        <Member>
+          <memberName>Rolan</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Băng cá nhân</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Đồ bảo hộ</spendingName>
+              <cost>5000000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Adam</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước ngọt</spendingName>
+              <cost>600000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Sửa xe</spendingName>
+              <cost>3000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt lợn rừng</spendingName>
+              <cost>1200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>John</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Ăn sáng</spendingName>
+              <cost>200000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Khách sạn</spendingName>
+              <cost>5400000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Ăn trưa</spendingName>
+              <cost>700000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>David</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Kem</spendingName>
+              <cost>150000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>5.0.jpg</string>
+        <string>5.1.jpg</string>
+        <string>5.2.jpg</string>
+        <string>5.3.jpg</string>
+        <string>5.4.jpg</string>
+      </images>
+      <membersView>Rolan, Adam, John, David.</membersView>
+    </Journey>
+    <Journey>
+      <id>6</id>
+      <journeyName>Du lịch bụi</journeyName>
+      <place>Vũng Tàu</place>
+      <stage>2</stage>
+      <members>
+        <Member>
+          <memberName>Giả Đại</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Bia</spendingName>
+              <cost>1000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Gà</spendingName>
+              <cost>300000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Hải sản</spendingName>
+              <cost>500000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Hồ Sơn</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Đồ ăn vặt</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Lý Tuần</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Đồ ăn vặt</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Ninh Tuệ</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>50000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Lều</spendingName>
+              <cost>200000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Giữ xe</spendingName>
+              <cost>70000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>6.0.jpg</string>
+        <string>6.1.jpg</string>
+        <string>6.2.jpg</string>
+      </images>
+      <membersView>Giả Đại, Hồ Sơn, Lý Tuần, Ninh Tuệ.</membersView>
+    </Journey>
+    <Journey>
+      <id>7</id>
+      <journeyName>Khám phá vùng núi Tây Bắc</journeyName>
+      <place>Sơn La</place>
+      <stage>3</stage>
+      <members>
+        <Member>
+          <memberName>Đỗ Tùng</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Bia</spendingName>
+              <cost>1000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Gà</spendingName>
+              <cost>300000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Hải sản</spendingName>
+              <cost>500000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Cầm Bạch</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Cơm trưa</spendingName>
+              <cost>200000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Mì tôm</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Xúc xích</spendingName>
+              <cost>50000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Snack</spendingName>
+              <cost>50000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Hà Đạo</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>80000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Nước ngọt</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Văn Mạnh</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>70000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Mì tôm</spendingName>
+              <cost>90000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Ăn tối</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>7.0.jpg</string>
+        <string>7.1.jpg</string>
+        <string>7.2.jpg</string>
+      </images>
+      <membersView>Đỗ Tùng, Cầm Bạch, Hà Đạo, Văn Mạnh.</membersView>
+    </Journey>
+    <Journey>
+      <id>8</id>
+      <journeyName>Chinh phục đỉnh Fansipan</journeyName>
+      <place>Núi Fansipan</place>
+      <stage>4</stage>
+      <members>
+        <Member>
+          <memberName>Tạ Tốn</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>150000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Snack</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Dương Tiễn</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Mì tôm</spendingName>
+              <cost>50000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Xúc xích</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Pepsi</spendingName>
+              <cost>10000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Snack</spendingName>
+              <cost>50000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Dương Quá</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Phở gói</spendingName>
+              <cost>50000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>60000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuốc Panadol Extra</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Quách Tĩnh</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Miếng dán salonpas</spendingName>
+              <cost>65000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Mì tôm</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Sữa</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>8.0.jpg</string>
+        <string>8.1.jpg</string>
+        <string>8.2.jpg</string>
+      </images>
+      <membersView>Tạ Tốn, Dương Tiễn, Dương Quá, Quách Tĩnh.</membersView>
+    </Journey>
+    <Journey>
+      <id>9</id>
+      <journeyName>Về miền tây</journeyName>
+      <place>Cần Thơ</place>
+      <stage>2</stage>
+      <members>
+        <Member>
+          <memberName>Hoàng Dung</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Kem chống nắng</spendingName>
+              <cost>150000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Kem đánh răng</spendingName>
+              <cost>30000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Đoãn Mỗ</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Keo 502</spendingName>
+              <cost>10000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bắp luộc</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt chuột</spendingName>
+              <cost>200000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Trái cây</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Long Nhi</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Ăn trưa</spendingName>
+              <cost>300000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>50000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuốc Panadol Extra</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Càng Long</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Dầu gió</spendingName>
+              <cost>45000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Sầu riêng</spendingName>
+              <cost>300000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>9.0.jpg</string>
+        <string>9.1.jpg</string>
+        <string>9.2.jpg</string>
+      </images>
+      <membersView>Hoàng Dung, Đoãn Mỗ, Long Nhi, Càng Long.</membersView>
+    </Journey>
+    <Journey>
+      <id>10</id>
+      <journeyName>Cưỡi voi bản đôn</journeyName>
+      <place>Đắk Lắk</place>
+      <stage>1</stage>
+      <members>
+        <Member>
+          <memberName>Trần Dần</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Kem chống nắng</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Kem đánh răng</spendingName>
+              <cost>50000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Đồ Tô</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>40000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Vé cưỡi voi</spendingName>
+              <cost>300000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thịt nhím</spendingName>
+              <cost>400000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Trái cây</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Bách Lý</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước ngọt</spendingName>
+              <cost>80000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Rượu cần</spendingName>
+              <cost>500000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Ăn trưa</spendingName>
+              <cost>700000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Đỗ Ngọc</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Sữa chua</spendingName>
+              <cost>45000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuốc Panadol Extra</spendingName>
+              <cost>30000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>10.0.jpg</string>
+        <string>10.1.jpg</string>
+        <string>10.2.jpg</string>
+      </images>
+      <membersView>Trần Dần, Đồ Tô, Bách Lý, Đỗ Ngọc.</membersView>
+    </Journey>
+    <Journey>
+      <id>11</id>
+      <journeyName>Khám phá Núi Bà Đen</journeyName>
+      <place>Tây Ninh</place>
+      <stage>2</stage>
+      <members>
+        <Member>
+          <memberName>Nhật Acoustic</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Pepsi</spendingName>
+              <cost>70000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Xúc xích</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Hải sản</spendingName>
+              <cost>500000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Phú bóng tối</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>50000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Pate heo</spendingName>
+              <cost>40000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Nhanh Đàm</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Mì tôm</spendingName>
+              <cost>20000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Lều</spendingName>
+              <cost>80000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Vinh biết tuốt</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Cơm phần</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Giữ xe</spendingName>
+              <cost>10000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>20000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>11.0.jpg</string>
+        <string>11.1.jpg</string>
+      </images>
+      <membersView>Nhật Acoustic, Phú bóng tối, Nhanh Đàm, Vinh biết tuốt.</membersView>
+    </Journey>
+    <Journey>
+      <id>12</id>
+      <journeyName>Đà lạt tour</journeyName>
+      <place>Lâm Đồng</place>
+      <stage>3</stage>
+      <members>
+        <Member>
+          <memberName>Anh Tài</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Găng tay cho đoàn</spendingName>
+              <cost>1000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuốc xịt muỗi</spendingName>
+              <cost>30000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Tèo Anh</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Cà phê buổi sáng</spendingName>
+              <cost>200000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Sửa xe</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Phát Huỳnh</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước tăng lực</spendingName>
+              <cost>100000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Bánh bao</spendingName>
+              <cost>30000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuê home stay</spendingName>
+              <cost>400000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>12.0.jpg</string>
+        <string>12.1.jpg</string>
+      </images>
+      <membersView>Anh Tài, Tèo Anh, Phát Huỳnh.</membersView>
+    </Journey>
+    <Journey>
+      <id>13</id>
+      <journeyName>Đạp xe xuyên việt</journeyName>
+      <place>Quốc lộ 1A</place>
+      <stage>0</stage>
+      <members>
+        <Member>
+          <memberName>Tuấn Vỉa</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Nước uống</spendingName>
+              <cost>500000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Chuối</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Cán Đoàn</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Xúc xích</spendingName>
+              <cost>20000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Sửa xe</spendingName>
+              <cost>200000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Nước tăng lực</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Hùng Mạnh</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Ăn sáng</spendingName>
+              <cost>2000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuốc giảm đau</spendingName>
+              <cost>120000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Cà phê sáng</spendingName>
+              <cost>400000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Hùng Lĩnh</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Thuốc chống cảm</spendingName>
+              <cost>885000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Ăn trưa</spendingName>
+              <cost>3000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Sữa</spendingName>
+              <cost>500000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Ăn tối</spendingName>
+              <cost>2000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuê nhà nghỉ</spendingName>
+              <cost>6000000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>13.0.jpg</string>
+        <string>13.1.jpg</string>
+        <string>13.2.jpg</string>
+      </images>
+      <membersView>Tuấn Vỉa, Cán Đoàn, Hùng Mạnh, Hùng Lĩnh.</membersView>
+    </Journey>
+    <Journey>
+      <id>14</id>
+      <journeyName>Thái Lan trip</journeyName>
+      <place>BangKok</place>
+      <stage>2</stage>
+      <members>
+        <Member>
+          <memberName>Alex</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Vé máy bay</spendingName>
+              <cost>20000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuê taxi</spendingName>
+              <cost>3000000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Martin</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Thuê khách sạn</spendingName>
+              <cost>10000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Tiền ăn uống</spendingName>
+              <cost>5000000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Thuốc cảm</spendingName>
+              <cost>200000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Sami</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Vé tham quan phố đỏ</spendingName>
+              <cost>300000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Cà phê sáng</spendingName>
+              <cost>500000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>14.0.jpg</string>
+        <string>14.1.jpg</string>
+        <string>14.2.jpg</string>
+        <string>14.3.jpg</string>
+      </images>
+      <membersView>Alex, Martin, Sami.</membersView>
+    </Journey>
+    <Journey>
+      <id>15</id>
+      <journeyName>Hồ Tràm Tour</journeyName>
+      <place>Vũng Tàu</place>
+      <stage>2</stage>
+      <members>
+        <Member>
+          <memberName>Tuyến</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Thuốc cảm</spendingName>
+              <cost>30000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Thịnh Phạm</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Bánh mì</spendingName>
+              <cost>40000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Tiền gửi xe</spendingName>
+              <cost>30000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Nhân Trần</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Sửa xe</spendingName>
+              <cost>1000000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Phú Tô</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Mua hải sản</spendingName>
+              <cost>400000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Quang Vinh Mai</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Mua hải sản</spendingName>
+              <cost>400000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Nam Lé</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Bơm xe</spendingName>
+              <cost>40000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Gia vị</spendingName>
+              <cost>100000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Nhật Nguyễn</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Thuê lều</spendingName>
+              <cost>80000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Gà</spendingName>
+              <cost>120000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+        <Member>
+          <memberName>Nhanh Đàm</memberName>
+          <expenses>
+            <Expense>
+              <spendingName>Thuê lều</spendingName>
+              <cost>80000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Rượu</spendingName>
+              <cost>80000</cost>
+            </Expense>
+            <Expense>
+              <spendingName>Băng cá nhân</spendingName>
+              <cost>8000</cost>
+            </Expense>
+          </expenses>
+        </Member>
+      </members>
+      <images>
+        <string>15.0.jpg</string>
+        <string>15.1.jpg</string>
+      </images>
+      <membersView>Tuyến, Thịnh Phạm, Nhân Trần, Phú Tô, Quang Vinh Mai, Nam Lé, Nhật Nguyễn, Nhanh Đàm.</membersView>
+    </Journey>
+  </journeys>
+  <tips>
+    <string>Biển Vũng Tàu không dễ bắt tôm tích như bạn nghĩ !</string>
+    <string>Đà Nẵng được bình chọn là thành phố đáng sống nhất Việt Nam.</string>
+    <string>Vịnh Hạ Long có diện tích khoảng 1.500 km². Từ năm 1994, vịnh đã được thêm vào danh sách Di sản thiên nhiên thế giới của UNESCO với gần 2.000 vách đá và đảo lớn nhỏ. </string>
+    <string>Pancake Rocks nằm ở rìa phía tây của Vườn Quốc gia Paparoa, New Zealand. Bãi đá này được cấu tạo từ các dãy núi đá vôi đồ sộ. Các lớp đá vôi bị thủy triều làm xói mòn qua hơn 30 triệu năm, nằm chồng xếp lên nhau tạo thành hình thù như những chiếc bánh xếp vô cùng đẹp mắt.</string>
+    <string>Mont St. Michel là một hòn đảo đặc biệt. Khi thủy triều vào, nó được bao quanh bởi nước biển, và khi thủy triều rút, hòn đảo này lại được bao quanh bởi đất liền.</string>
+    <string>Hố xanh Dean nằm ở gần đảo Long Island của Bahamas, được mệnh danh là hố xanh sâu nhất thế giới. Nó có độ sâu 220m. Tuỳ vào độ sâu mà màu sắc của nước có sự thay đổi</string>
+    <string>Dưới đáy đại dương, ngay ngoài khơi bờ biển Cancun là Bảo tàng dưới nước Cancun. Bảo tàng có hơn 400 tác phẩm điêu khắc có kích thước bằng với người thật của nghệ sĩ Jason de Caires Taylor.</string>
+    <string>Thác Bản Dốc nằm ở giữa ranh giới Việt Nam và Trung Quốc, thác có vẻ đẹp tuyệt mĩ của sự sơ khai và mờ ảo.</string>
+    <string>Núi Bà Đen (Tây Ninh) với độ cao 986m là ngọn núi cao nhât miền Nam của Việt Nam.</string>
+    <string>Hồ Trị An (Đồng Nai) là địa điểm cắm trại dã ngoại đẹp, đặc biệt có loài cá vô cùng hiếm là cá Hoàng Đế.</string>
+    <string>Tà Đùng được ví như Vịnh Hạ Long trong lòng Đắk Nông.</string>
+    <string>Hang Sơn Đòng (Việt Nam) là hang động tự nhiên lớn nhất thế giới.</string>
+    <string>Hồ Loch Ness kéo dài đến 37 km (23 dặm) Tây Nam của thành phố Inverness. Có bề mặt cao hơn mực nước biển 15.8 m (52 feet). Hồ này nổi tiếng về huyền thoại của "quái vật hồ Loch Ness".</string>
+    <string>Hawaii là hòn đảo xinh đẹp với mệnh danh là đảo thần tiên, điều thú vị là trên đảo có rất rất nhiều khóm (dứa).</string>
+    <string>Tòa lâu đài Blarney, Ireland, nơi có tảng đá huyền thoại vừa được bình chọn là một trong những điểm du lịch kỳ quái nhất thế giới.</string>
+    <string>Các kim tự tháp ở Ai Cập là những công trình xây dựng bí ẩn nhất thế giới.</string>
+    <string>Vạn Lí Trường Thành được xây dựng từ thế kỷ 5 TCN cho tới thế kỷ 16, để bảo vệ Trung Hoa khỏi những cuộc tấn công của người Hung Nô, Mông Cổ, Đột Quyết, và những bộ tộc du mục.</string>
+    <string>Bali là hòn đảo du lịch nổi tiếng nhất Indonesia, có dịp đến Bali, bạn nên ghé thăm các đền, chùa, tham gia các hoạt động lặn biển, chèo thuyền vượt thác, leo núi lửa,… hoặc đi thăm khu rừng khỉ Monkey Forest, ruộng lúa bậng thang,…</string>
+    <string>Crete là hòn đảo lớn nhất và đông dân nhất của Hy Lạp. Theo truyền thuyết thì đây còn là nơi sinh của Zeus (vua của các vị thần Olympian) và vị vua của nền văn minh Châu Âu hiện đại. Hòn đảo này được ví như 1 viên ngọc ở Địa Trung Hải với rất nhiều thần thoại và giá trị lịch sử khảo cổ học.</string>
+    <string>Siem Reap (Campodia) nổi tiếng thế giới với quần thể đền Angkor Wat khổng lồ. Đây là quần thể đền đài và di tích lớn nhất và là 1 trong 7 kỳ quan của thế giới.</string>
+    <string>Phuket là một trong những hòn đảo du lịch nổi tiếng nhất ở Thái Lan. Đây cũng là hòn đảo lớn nhất ở Thái.</string>
+    <string>Istanbul trước đây là thủ đô của nhiều đế chế hùng mạnh như La Mã, Ottoman, Latin…Hiện nay Istanbul là thành phố lớn và quan trọng nhất của Thổ Nhĩ Kỳ.</string>
+    <string>Jamaica là 1 quốc đảo thuộc vùng biển Caribbean ở khu vực Trung Mỹ. Jamaica đặc biệt nổi tiếng với những bãi biển dài, cát trắng mịn, cùng với những dãy núi hùng vĩ trải dài tít tắp.</string>
+    <string>Hội An là một trong những điểm đến du lịch hấp dẫn nhất ở Việt Nam đối với du khách nước ngoài. Vào ngày 14 âm lịch mỗi tháng, cả Hội An sẽ lung linh sắc màu đèn lồng tuyệt đẹp.</string>
+    <string>St.Petersburg là thành phố lớn thứ 2 ở Nga, đây cũng được xem là thành phố trung tâm văn hóa của Nga. Được mệnh danh là thành phố của những Cung điện.</string>
+    <string>Roatan (Roatán) là một trong những hòn đảo nằm trong vịnh Caribbean, thuộc Honduras. Là một phần của rạng san hô khổng lồ Mesoamerican.</string>
+    <string>Ambergris Caye là hòn đảo lớn nhất ở Belize. Ở đây có rặng san hô lớn thứ 2 thế giới và dài nhất Châu Mỹ là Mesoamerican Barrier Reef. Ngoài ra, Belize còn nổi tiếng với hố xanh khổng lồ Great Blue Hole.</string>
+    <string>Rio de Janeiro nổi tiếng thế giới với những vũ điện samba và bossa nova nóng bóng. Thành phố này còn được biết đến như là thành phố của những lễ hội.</string>
+    <string>Playa del Carmen là một thành phố nghỉ dưỡng nổi tiếng nằm bên bờ biển Caribe của Mexico. Đây còn là một trong những nơi lặn biển hàng đầu thế giới nhờ hệ thống các hang động chìm đưới nước.</string>
+    <string>Dubai thuộc các Tiểu Vương quốc Ả Rập Thống Nhất (UAE). Thành phố này được biết đến như 1 điểm đến du lịch xa hoa và đẳng cấp nhất thế giới.</string>
+    <string>Kathmandu là thủ đô của Nepal, nằm trong thung lũng bao quanh bởi các di tích, đền đài với hàng nghìn năm lịch sử. Đây cũng là thành phố lớn nhất và là trung tâm kinh tế, văn hóa, lịch sử của Nepal.</string>
+  </tips>
+</Data>

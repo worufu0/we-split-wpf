@@ -1,0 +1,515 @@
+﻿<UserControl x:Class="WeSplit.DetailUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WeSplit"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             x:Name="detailUserControl"
+             d:DesignWidth="1280"
+             d:DesignHeight="720"
+             Loaded="detailUserControl_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="10 10 5 5"
+                Effect="{StaticResource grayShadowEffect}">
+            <TextBlock Text="CHI TIẾT CHUYẾN ĐI"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Tahoma"
+                       FontStyle="Italic"
+                       FontWeight="Heavy"
+                       FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToTitleTextSizeConverter}}"
+                       Foreground="#F4C51F"/>
+        </Border>
+        <Border Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="5 10 5 5"
+                Effect="{StaticResource grayShadowEffect}">
+            <Grid x:Name="stageGrid"
+                  Margin="20 10 20 10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="GIAI ĐOẠN"
+                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                           Style="{StaticResource detailHeaderTextStyle}"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton Grid.Column="0"
+                                 HorizontalAlignment="Left"
+                                 ToolTip="Bắt đầu"
+                                 Content="Bắt đầu"
+                                 IsChecked="{Binding currentJourney.stage, Converter={StaticResource integerToRadioValueConverter}, ConverterParameter=0}"
+                                 Style="{StaticResource stageRadioButtonStyle}"/>
+                    <Line Grid.Column="0"
+                          Margin="20 0 0 0"
+                          Style="{StaticResource stageLineStyle}"/>
+                    <RadioButton Grid.Column="1"
+                                 HorizontalAlignment="Left"
+                                 ToolTip="Đang đi"
+                                 Content="Đang đi"
+                                 IsChecked="{Binding currentJourney.stage, Converter={StaticResource integerToRadioValueConverter}, ConverterParameter=1}"
+                                 Style="{StaticResource stageRadioButtonStyle}"/>
+                    <Line Grid.Column="1"
+                          Margin="20 0 0 0"
+                          Style="{StaticResource stageLineStyle}"/>
+                    <RadioButton Grid.Column="2"
+                                 HorizontalAlignment="Left"
+                                 ToolTip="Đến nơi"
+                                 Content="Đến nơi"
+                                 IsChecked="{Binding currentJourney.stage, Converter={StaticResource integerToRadioValueConverter}, ConverterParameter=2}"
+                                 Style="{StaticResource stageRadioButtonStyle}"/>
+                    <Line Grid.Column="2"
+                          Margin="20 0 0 0"
+                          Style="{StaticResource stageLineStyle}"/>
+                    <RadioButton Grid.Column="3"
+                                 HorizontalAlignment="Left"
+                                 ToolTip="Đang về"
+                                 Content="Đang về"
+                                 IsChecked="{Binding currentJourney.stage, Converter={StaticResource integerToRadioValueConverter}, ConverterParameter=3}"
+                                 Style="{StaticResource stageRadioButtonStyle}"/>
+                    <Line Grid.Column="3"
+                          Margin="20 0 20 0"
+                          Style="{StaticResource stageLineStyle}"/>
+                    <RadioButton Grid.Column="4"
+                                 HorizontalAlignment="Right"
+                                 ToolTip="Kết thúc"
+                                 Content="Kết thúc"
+                                 IsChecked="{Binding currentJourney.stage, Converter={StaticResource integerToRadioValueConverter}, ConverterParameter=4}"
+                                 Style="{StaticResource stageRadioButtonStyle}"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border Grid.Row="0"
+                Grid.Column="5"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="5 10 10 5"
+                Effect="{StaticResource grayShadowEffect}">
+            <Grid x:Name="buttonsGrid"
+                  Margin="5">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button x:Name="updateButton"
+                            Style="{StaticResource updateButtonStyle}"
+                            Click="updateButton_Click"/>
+                    <Button x:Name="deleteButton"
+                            Style="{StaticResource deleteButtonStyle}"
+                            Click="deleteButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1"
+                Grid.Column="0"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="2"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="10 5 5 5"
+                Effect="{StaticResource grayShadowEffect}">
+            <Grid x:Name="informationGrid"
+                  Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           Text="THÔNG TIN CƠ BẢN"
+                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                           Style="{StaticResource detailHeaderTextStyle}"/>
+                <Border Grid.Row="1"
+                        Grid.Column="0"
+                        CornerRadius="10"
+                        Margin="5">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding ElementName=imageListView, Path=SelectedItem, Converter={StaticResource relativeToAbsoluteConverter}}"
+                                    RenderOptions.BitmapScalingMode="HighQuality"
+                                    Stretch="UniformToFill"/>
+                    </Border.Background>
+                </Border>
+                <Grid Grid.Row="1"
+                      Grid.Column="1"
+                      HorizontalAlignment="Center"
+                      Margin="5">
+                    <StackPanel>
+                        <TextBlock Text="{Binding currentJourney.journeyName}"
+                                   TextWrapping="Wrap"
+                                   FontFamily="Tahoma"
+                                   FontWeight="Heavy"
+                                   FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                   Foreground="#F4C51F"
+                                   Margin="0 0 0 10"/>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0 0 0 15">
+                            <Image Source="Assets/Icons/PlaceIcon.png"
+                                   VerticalAlignment="Center"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   Stretch="UniformToFill"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0 0 5 0"/>
+                            <TextBlock Text="{Binding currentJourney.place}"
+                                   TextWrapping="Wrap"
+                                   FontFamily="Tahoma"
+                                   FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                   Foreground="#FFFFFF"/>
+                        </StackPanel>
+                        <TextBlock Text="{Binding currentJourney.membersView}"
+                                   TextWrapping="Wrap"
+                                   FontFamily="Tahoma"
+                                   FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                   Foreground="#BBBBBB"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right">
+                        <Image Source="Assets/Icons/MemberCountIcon.png"
+                           VerticalAlignment="Center"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="UniformToFill"
+                           Width="20"
+                           Height="20"/>
+                        <TextBlock Text="{Binding currentJourney.members.Count}"
+                               TextAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontFamily="Tahoma"
+                               Foreground="#FFFFFF"
+                               FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4"
+                Grid.Column="0"
+                Grid.RowSpan="3"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="10 5 5 10"
+                Effect="{StaticResource grayShadowEffect}">
+            <Grid x:Name="pieChartGrid"
+                  Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="BIỂU ĐỒ CHI TRẢ"
+                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                           Style="{StaticResource detailHeaderTextStyle}"/>
+                <Grid Grid.Row="1">
+                    <lvc:PieChart x:Name="pieChart"
+                                  LegendLocation="Bottom"
+                                  Hoverable="True"
+                                  DisableAnimations="True"
+                                  Foreground="#FFFFFF"
+                                  FontFamily="Tahoma"
+                                  FontWeight="Thin"
+                                  FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToNormalTextSizeConverter}}">
+                        <lvc:PieChart.DataTooltip>
+                            <lvc:DefaultTooltip Background="#111111"/>
+                        </lvc:PieChart.DataTooltip>
+                    </lvc:PieChart>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1"
+                Grid.Column="2"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="4"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="5 5 10 5"
+                Effect="{StaticResource grayShadowEffect}">
+            <Grid x:Name="photosGrid"
+                  Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="HÌNH ẢNH CHUYẾN ĐI"
+                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                           Style="{StaticResource detailHeaderTextStyle}"/>
+                <TextBlock Grid.Row="1"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Text="Chưa có hình ảnh"
+                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                           Foreground="#999999"
+                           Visibility="{Binding ElementName=imageListView, Path=Items.Count, Converter={StaticResource itemCountToEmtyNoficationCoverter}}"/>
+                <ListView x:Name="imageListView"
+                          Grid.Row="1"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          Background="Transparent"
+                          Focusable="False"
+                          SelectedIndex="0"
+                          BorderThickness="0">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected"
+                                 Value="True">
+                                    <Setter Property="IsTabStop"
+                                    Value="False"/>
+                                </Trigger>
+                            </Style.Triggers>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter/>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="True">
+                                                <Setter Property="Effect"
+                                                        Value="{StaticResource whiteStrongShadowEffect}"/>
+                                            </Trigger>
+                                            <Trigger Property="IsSelected"
+                                                     Value="True">
+                                                <Setter Property="Effect"
+                                                        Value="{StaticResource whiteStrongShadowEffect}"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="4"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Image x:Name="image"
+                                   Source="{Binding Converter={StaticResource relativeToAbsoluteConverter}}"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   Stretch="UniformToFill"
+                                   Height="100"
+                                   Margin="4"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4"
+                Grid.Column="1"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="3"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="5 5 5 10"
+                Effect="{StaticResource grayShadowEffect}">
+            <Grid x:Name="columnChartGrid"
+                  Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="BIỂU ĐỒ KHOẢN CHI"
+                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                           Style="{StaticResource detailHeaderTextStyle}"/>
+                <lvc:CartesianChart x:Name="cartesianChart"
+                                    Grid.Row="1"
+                                    LegendLocation="Bottom"
+                                    DisableAnimations="True"
+                                    Foreground="#FFFFFF"
+                                    Hoverable="True"
+                                    FontFamily="Tahoma"
+                                    FontWeight="Thin"
+                                    FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToNormalTextSizeConverter}}">
+                    <lvc:CartesianChart.DataTooltip>
+                        <lvc:DefaultTooltip ShowTitle="False"
+                                            Background="#111111"/>
+                    </lvc:CartesianChart.DataTooltip>
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis Title="Chí phí"/>
+                    </lvc:CartesianChart.AxisY>
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis Title="Khoản chi"
+                                  ShowLabels="False"/>
+                    </lvc:CartesianChart.AxisX>
+                </lvc:CartesianChart>
+            </Grid>
+        </Border>
+        <Border Grid.Row="4"
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="3"
+                CornerRadius="5"
+                Background="#222222"
+                Margin="5 5 10 10"
+                Effect="{StaticResource grayShadowEffect}">
+            <Grid x:Name="summaryGrid"
+                  Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="TỔNG KẾT CHUYẾN ĐI"
+                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                           Style="{StaticResource detailHeaderTextStyle}"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="summaryBackgoundBorder"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            CornerRadius="10"
+                            Background="#000000"
+                            Opacity="0.5"/>
+                    <StackPanel Grid.Column="0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Margin="10 0 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Tổng: "
+                                       FontFamily="Tahoma"
+                                       FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                       Foreground="#999999"/>
+                            <TextBlock Text="{Binding totalCost}"
+                                       TextWrapping="Wrap"
+                                       FontFamily="Tahoma"
+                                       FontWeight="Heavy"
+                                       FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                       Foreground="#FFFFFF"
+                                       Margin="0 0 0 5"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0"
+                                    Orientation="Horizontal">
+                            <TextBlock Text="Trung bình: "
+                                       FontFamily="Tahoma"
+                                       FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                       Foreground="#999999"/>
+                            <TextBlock Text="{Binding averageCost}"
+                                       TextWrapping="Wrap"
+                                       FontFamily="Tahoma"
+                                       FontWeight="Heavy"
+                                       FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                       Foreground="#FFFFFF"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center">
+                        <Border BorderBrush="#79FF52"
+                                BorderThickness="5 0 0 0">
+                            <TextBlock Text="Nhận lại"
+                                       HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       FontFamily="Tahoma"
+                                       FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToNormalTextSizeConverter}}"
+                                       Foreground="#FFFFFF"
+                                       Padding="5"/>
+                        </Border>
+                        <Border BorderBrush="#FF4848"
+                                BorderThickness="5 0 0 0">
+                            <TextBlock Text="Trả thêm"
+                                       HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       FontFamily="Tahoma"
+                                       FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToNormalTextSizeConverter}}"
+                                       Foreground="#FFFFFF"
+                                       Padding="5"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+                <ListView x:Name="summaryListView"
+                          Grid.Row="2"
+                          VerticalAlignment="Top"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          Focusable="False"
+                          Background="Transparent"
+                          BorderThickness="0"
+                          Padding="5">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="Focusable"
+                                    Value="False"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0"
+                                           Text="{Binding memberName}"
+                                           TextAlignment="Left"
+                                           Typography.Capitals="AllSmallCaps"
+                                           FontFamily="Tahoma"
+                                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                           Foreground="#FFFFFF"/>
+                                <TextBlock Grid.Column="1"
+                                           Text="{Binding cost}"
+                                           TextAlignment="Right"
+                                           FontFamily="Tahoma"
+                                           FontSize="{Binding ElementName=detailUserControl, Path=ActualHeight, Converter={StaticResource windowHeightToHeaderTextSizeConverter}}"
+                                           Foreground="{Binding cost, Converter={StaticResource signToColorConverter}}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

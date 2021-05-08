@@ -1,0 +1,130 @@
+﻿<Window x:Class="WeSplit.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeSplit"
+        mc:Ignorable="d"
+        x:Name="homeScreen"
+        Icon="Assets/Icons/ApplicationIcon.ico"
+        Title="We Split"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        ShowActivated="True"
+        Background="#333333"
+        Width="1280" 
+        Height="720"
+        Closed="homeScreenWindow_Closed">
+    <Grid>
+        <Border BorderBrush="#4C5969"
+                BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="31"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="titleBar"
+                      Grid.Row="0"
+                      Background="#111111"
+                      MouseDown="titleBar_MouseDown">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right">
+                        <Button x:Name="aboutButton"
+                                Style="{StaticResource aboutButtonStyle}"
+                                Click="aboutButton_Click"/>
+                        <Button x:Name="settingsButton"
+                                Style="{StaticResource settingsButtonStyle}"
+                                Click="settingsButton_Click"/>
+                        <Button x:Name="minimizeWindowButton"
+                                Style="{StaticResource minimizeWindowButtonStyle}"
+                                Click="minimizeWindowButton_Click"/>
+                        <ToggleButton x:Name="maximizeWindowButton"
+                                Style="{StaticResource maximizeWindowButtonStyle}"
+                                Checked="maximizeWindowButton_Checked"
+                                Unchecked="maximizeWindowButton_Unchecked"/>
+                        <Button x:Name="closeWindowButton"
+                                Style="{StaticResource closeWindowButtonStyle}"
+                                Click="closeWindowButton_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Left">
+                        <ToggleButton x:Name="menuButton"
+                                      Style="{StaticResource menuButtonStyle}">
+                            <ToggleButton.Triggers>
+                                <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="navigationGrid"
+                                                             Storyboard.TargetProperty="Width"
+                                                             FillBehavior="HoldEnd"
+                                                             BeginTime="0:0:0"
+                                                             Duration="0:0:0.1"
+                                                             To="220"/>
+                                            <DoubleAnimation Storyboard.TargetName="mainGrid"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             FillBehavior="HoldEnd"
+                                                             BeginTime="0:0:0"
+                                                             Duration="0:0:0.1"
+                                                             To="0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="navigationGrid"
+                                                             Storyboard.TargetProperty="Width"
+                                                             FillBehavior="HoldEnd"
+                                                             BeginTime="0:0:0"
+                                                             Duration="0:0:0.1"
+                                                             To="0"/>
+                                            <DoubleAnimation Storyboard.TargetName="mainGrid"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             FillBehavior="HoldEnd"
+                                                             BeginTime="0:0:0"
+                                                             Duration="0:0:0.1"
+                                                             To="1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </ToggleButton.Triggers>
+                        </ToggleButton>
+                        <Image Source="Assets/Icons/ApplicationIcon.ico"
+                               Width="28"
+                               Height="28"/>
+                        <TextBlock Text="We Split Beta"
+                                   VerticalAlignment="Center"
+                                   FontFamily="Tahoma"
+                                   FontWeight="Heavy"
+                                   FontSize="15"
+                                   Foreground="#FFFFFF"/>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="mainGrid"
+                      Grid.Row="1"
+                      Opacity="1"
+                      MouseEnter="mainGrid_MouseEnter"/>
+                <Grid x:Name="navigationGrid"
+                      Grid.Row="1"
+                      HorizontalAlignment="Left"
+                      Background="#444444"
+                      Width="0">
+                    <ListView x:Name="navigationListView"
+                              SelectedIndex="0"
+                              ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                              Focusable="False"
+                              Background="Transparent"
+                              BorderThickness="0"
+                              SelectionChanged="navigationListView_SelectionChanged">
+                        <ListViewItem Style="{StaticResource listListViewItemStyle}"/>
+                        <ListViewItem Style="{StaticResource detailListViewItemStyle}"
+                                      IsEnabled="False"/>
+                        <ListViewItem Style="{StaticResource addListViewItemStyle}"/>
+                    </ListView>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

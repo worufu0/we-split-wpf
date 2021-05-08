@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBE86A01-96FE-4409-8CF3-8E8596BE15C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WeSplit</RootNamespace>
+    <AssemblyName>WeSplit</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AboutScreen.xaml.cs">
+      <DependentUpon>AboutScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddingUserControl.xaml.cs">
+      <DependentUpon>AddingUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmationScreen.xaml.cs">
+      <DependentUpon>ConfirmationScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter.cs" />
+    <Compile Include="DetailUserControl.xaml.cs">
+      <DependentUpon>DetailUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListUserControl.xaml.cs">
+      <DependentUpon>ListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationScreen.xaml.cs">
+      <DependentUpon>NotificationScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsScreen.xaml.cs">
+      <DependentUpon>SettingsScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class.cs" />
+    <Page Include="AboutScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddingUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfirmationScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NotificationScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\SuccessIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\SplashScreenCheckedCheckBox.png" />
+    <Resource Include="Assets\Icons\SplashScreenUncheckedCheckBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\SplashScreenBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\ApplicationIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\CloseWindowButton.png" />
+    <Resource Include="Assets\Icons\HoverMaximizeWindowButton.png" />
+    <Resource Include="Assets\Icons\HoverMinimizeWindowButton.png" />
+    <Resource Include="Assets\Icons\HoverNormalWindowButton.png" />
+    <Resource Include="Assets\Icons\MaximizeWindowButton.png" />
+    <Resource Include="Assets\Icons\MinimizeWindowButton.png" />
+    <Resource Include="Assets\Icons\NormalWindowButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\HoverMenuButton.png" />
+    <Resource Include="Assets\Icons\HoverSettingsButton.png" />
+    <Resource Include="Assets\Icons\MenuButton.png" />
+    <Resource Include="Assets\Icons\SettingsButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\AddIcon.png" />
+    <Resource Include="Assets\Icons\DetailIcon.png" />
+    <Resource Include="Assets\Icons\ListIcon.png" />
+    <Resource Include="Assets\Icons\SelectedAddIcon.png" />
+    <Resource Include="Assets\Icons\SelectedDetailIcon.png" />
+    <Resource Include="Assets\Icons\SelectedListIcon.png" />
+    <Resource Include="Assets\Icons\SelectedStatisticalIcon.png" />
+    <Resource Include="Assets\Icons\StatisticalIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\AboutButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\HoverAboutButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\BigApplicationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\CloseToolWindowButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\SettingsScreenCheckedCheckBox.png" />
+    <Resource Include="Assets\Icons\SettingsScreenHoverCheckBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\SettingsScreenUncheckedCheckBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\FilterSearchButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\HoverFilterSearchButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\PlaceIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\MemberCountIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\AddImageButton.png" />
+    <Resource Include="Assets\Icons\DisabledRemoveImageButton.png" />
+    <Resource Include="Assets\Icons\RemoveImageButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\DeleteButton.png" />
+    <Resource Include="Assets\Icons\UpdateButton.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

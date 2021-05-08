@@ -1,0 +1,113 @@
+﻿<Window x:Class="WeSplit.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeSplit"
+        mc:Ignorable="d"
+        x:Name="splashScreen"
+        Icon="Assets/Icons/ApplicationIcon.ico"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        ShowActivated="True"
+        Topmost="True"
+        AllowsTransparency="True"
+        ShowInTaskbar="False"
+        Background="#333333"
+        Opacity="0"
+        Width="710"
+        Height="460"
+        Loaded="splashScreen_Loaded">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="splashScreen"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0"
+                                     To="1"
+                                     Duration="0:0:0.5"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Image Source="Assets/Images/SplashScreenBackground.png"
+               RenderOptions.BitmapScalingMode="HighQuality"
+               Stretch="UniformToFill"
+               Opacity="0.1"/>
+        <Border BorderBrush="#F4C51F"
+                BorderThickness="1"
+                Margin="10">
+            <Grid>
+                <Grid VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Margin="30 0 0 170">
+                    <TextBlock Text="Welcome To"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               FontFamily="Monotype Corsiva"
+                               FontWeight="Heavy"
+                               FontSize="40"
+                               Foreground="#FFFFFF"
+                               Margin="-50 -20 0 0"/>
+                    <TextBlock Text="WE SPLIT"
+                               FontFamily="Tahoma"
+                               FontWeight="Heavy"
+                               FontSize="70"
+                               Foreground="#F4C51F"/>
+                    <TextBlock Text="App"
+                               VerticalAlignment="Bottom"
+                               HorizontalAlignment="Right"
+                               FontFamily="Tahoma"
+                               FontWeight="Thin"
+                               FontSize="20"
+                               Foreground="#FFFFFF"
+                               Margin="0 0 0 -10"/>
+                </Grid>
+                <Grid Margin="5">
+                    <Border VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            BorderBrush="#FFFFFF"
+                            BorderThickness="0 1 0 1"
+                            Width="360"
+                            Margin="0 60 0 0">
+                        <TextBlock x:Name="tipBlock"
+                                   TextAlignment="Center"
+                                   TextWrapping="WrapWithOverflow"
+                                   FontFamily="Tahoma"
+                                   FontWeight="Normal"
+                                   FontStyle="Italic"
+                                   FontSize="13"
+                                   Foreground="#FFFFFF"
+                                   Margin="0 5 0 5"/>
+                    </Border>
+                    <TextBlock Text="NTP Team"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               FontFamily="Tahoma"
+                               FontWeight="Heavy"
+                               FontSize="14"
+                               Foreground="#A0A0A0"/>
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Left">
+                        <CheckBox x:Name="splashScreenDisabled"
+                                  IsChecked="{Binding splashScreenDisabled}"
+                                  Style="{StaticResource splashScreenCheckBoxStyle}"/>
+                        <TextBlock Text="Không hiện hộp thoại này mỗi khi khởi động"
+                                   VerticalAlignment="Center"
+                                   FontFamily="Tahoma"
+                                   FontWeight="Thin"
+                                   FontSize="12"
+                                   Foreground="#A0A0A0"/>
+                    </StackPanel>
+                    <Button x:Name="skipButton"
+                            Style="{StaticResource skipButtonStyle}"
+                            Click="skipButton_Click"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
